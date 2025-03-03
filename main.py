@@ -6,7 +6,6 @@ from banished import *
 from equipment import *
 def intinput(message: str, range_stop, range_start=1):
     """Forces user to enter a valid number."""
-
     while True:
         try:
             answer = int(input(message))  # Get user input
@@ -16,7 +15,8 @@ def intinput(message: str, range_stop, range_start=1):
                 print(f"Invalid input, please enter a number between {range_start} and {range_stop}.")
         except ValueError:
             print("Please enter a valid number.")
-CHARACTERS = {"1": Fairy,
+
+CHARACTERS = {"1": Fairy,  #Constant dicts shall be used later on
               "2": Flake,
               "3": Exile,
               "4": Banished}
@@ -59,7 +59,7 @@ while True:
         char1armor = intinput("Choose your armor: ", 4)
         char1armor = ARMOR[char1armor]()
 
-    print(f"1. Fairy\n"
+    print(f"1. Fairy\n"  #Same with character 2
           f"2. Flake\n"
           f"3. Exile\n"
           f"4. Banished")
