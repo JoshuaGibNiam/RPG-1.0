@@ -24,9 +24,9 @@ WEAPON = {"1": Dagger,
           "2": Sword,
           "3": Greatsword,
           "4": Staff}
-ARMOR = {"1": Chainmail,
-         "2": PlateArmor,
-         "3": Leather,
+ARMOR = {"1": Leather,
+         "2": Chainmail,
+         "3": PlateArmor,
          "4": WizardRobe}
 while True:
     print(f"Welcome to this RPG game! Here we have 4 characters: \n"
@@ -65,7 +65,7 @@ while True:
           f"4. Banished")
     char2 = intinput("Choose your second character (1-4): ", 4)
     char2 = CHARACTERS[char2]("Character 2")
-    print(f"Character 1 has {char1.attack} points.\n"
+    print(f"Character 2 has {char2.attack} points.\n"
           f"1. Dagger +2 Bonus, Cost: 5\n"
           f"2. Sword +4 Bonus, Cost: 8\n"
           f"3. Greatsword +6 Bonus, Cost: 12\n"
@@ -75,7 +75,7 @@ while True:
     while not char2.equip_weapon(char2weapon):
         char2weapon = intinput("Choose your weapon: ", 4)
         char2weapon = WEAPON[char2weapon]()
-    print(f"Character 1 has {char2.defense} points.\n"
+    print(f"Character 2 has {char2.defense} points.\n"
           f"1. Leather +2 Bonus, Cost: 5\n"
           f"2. Chainmail +4 Bonus, Cost: 8\n"
           f"3. Plate Armor +6 Bonus, Cost: 12\n"

@@ -6,5 +6,5 @@ class Exile(Character):
 
     def special_ability(self):
         self.attack_power += 2
-        self.defense += 1
-        return f"{self.name} increases his attack power and becomes a banana!!!"
+        self.defense_power += 1
+        print(f"{self.name} increases his attack power and becomes a banana!!!")
