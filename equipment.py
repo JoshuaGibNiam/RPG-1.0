@@ -37,3 +37,4 @@ class WizardRobe:
     def __init__(self):
         self.defense_bonus = 3
         self.min_defense = 6
+
