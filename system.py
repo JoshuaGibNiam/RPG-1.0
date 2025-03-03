@@ -1,5 +1,5 @@
 import random
-
+import time
 def apply_random_modifier(value):
     """Randomly increases or decreases a value by up to 10%"""
     modifier = random.uniform(-0.1, 0.1)
@@ -19,7 +19,7 @@ def fight(character1, character2):
 
     while character1.hp > 0 and character2.hp > 0:
         # Character 1 attacks
-        attack_value = apply_random_modifier(character1.attack_power)
+        attack_value = apply_random_modifier(character1.attack)
 
         if critical_hit():
             attack_value = round(attack_value * 1.5, 2)
@@ -34,7 +34,7 @@ def fight(character1, character2):
 
         # Swap turns
         character1, character2 = character2, character1
-
+        time.sleep(1)
     # Determine the winner
     winner = character1 if character1.hp > 0 else character2
     print(f"\n🏆 {winner.name} wins the battle!\n")
